@@ -36,11 +36,11 @@ void process_image_callback(const sensor_msgs::Image img)
     
     // Loop through each pixel in the image and check if there's a bright white one
     for(int i = 0; i < img.height * img.step; i+=3) {
-      int ball = i % img.step;
+      
       if (img.data[i] == white_pixel && img.data[i+1] == white_pixel && img.data[i+2] == white_pixel){
     // Then, identify if this pixel falls in the left, mid, or right side of the image
         //std::cout << "FOUND IT!" << std::endl; //If the white ball is found
-        
+        int ball = i % img.step;
         if (ball <= left_end){
           turn_left = true;
           break;
