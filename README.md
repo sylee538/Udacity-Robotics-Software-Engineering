@@ -6,8 +6,6 @@ This repository is for Nanodegree in Robotics Software Engineer at Udacity
 
 #### Contents
 
-[Projects](#projects)
-
 1. [Project1](#project1)
 2. [Project2](#project2)
 
