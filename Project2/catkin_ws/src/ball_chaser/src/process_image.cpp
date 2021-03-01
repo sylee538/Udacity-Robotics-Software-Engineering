@@ -11,11 +11,11 @@ void drive_robot(float lin_x, float ang_z)
     // TODO: Request a service and pass the velocities to it to drive the robot
   ROS_INFO_STREAM("Moving robot to designated place");
   ball_chaser::DriveToTarget srv;
-
+  
   srv.request.linear_x = lin_x;
   srv.request.angular_z = ang_z;
   ROS_INFO("Setting - linear_x: %1.2f, angular_z: %1.2f", (float)srv.request.linear_x, (float)srv.request.angular_z);
-
+  
   if(!client.call(srv))
     ROS_ERROR("Failed to call service command_robot");
 }
@@ -29,19 +29,20 @@ void process_image_callback(const sensor_msgs::Image img)
 //     bool turn_left = false;
 //     bool turn_right = false;
 //     bool move_forward = false;
-
+  
     int left_edge = img.step/3;
     int mid_edge = 2 * img.step/3;
     int right_edge = img.step;
-
+    
     // Loop through each pixel in the image and check if there's a bright white one
     for(int i = 0; i < img.height * img.step; i+=3) {
-      
+      //ROS_INFO_STREAM("I'm INSIDE THE FOR LOOP");
       if (img.data[i] == white_pixel && img.data[i+1] == white_pixel && img.data[i+2] == white_pixel){
     // Then, identify if this pixel falls in the left, mid, or right side of the image
+        //ROS_INFO_STREAM("DO YOU SEE ME?");
         int ball = i % img.step;
         //std::cout << "FOUND IT!" << std::endl; //If the white ball is found
-
+        
         if (ball >= 0 && ball <= left_edge){
 //           turn_left = true;
 //           turn_right = false;
