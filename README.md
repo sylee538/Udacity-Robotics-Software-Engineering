@@ -15,7 +15,7 @@ This repository is for Nanodegree in Robotics Software Engineer at Udacity
 
 ### Goal
 
-Design a Gazebo World environment including mulitple models and use it as a base for the rest of my projects.
+Design a Gazebo World environment including multiple models and use it as a base for the rest of my projects.
 
 ### What I learned
 - How to create Gazebo World and interact with it through Plugins.
@@ -28,8 +28,6 @@ Design a Gazebo World environment including mulitple models and use it as a base
 ### Goal
 
 Design and build a mobile robot, and house it in my world I previously designed. Then, program my robot with C++ nodes in ROS to chase white colored ball.
-
-*Current Issue: my robot would not detect and chase the white ball.*
 
 ### What I learned
 - How to model a mobile robot that can interface with ROS.

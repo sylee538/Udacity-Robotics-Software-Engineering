@@ -1,7 +1,7 @@
 # Project1: Build My World
 
 ### Goal
-Design a Gazebo World environment including mulitple models and use it as a base for the rest of my projects.
+Design a Gazebo World environment including multiple models and use it as a base for the rest of my projects.
 
 ### Directory Structure
 ```
