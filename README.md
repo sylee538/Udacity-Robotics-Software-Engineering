@@ -8,7 +8,6 @@ This repository is for Nanodegree in Robotics Software Engineer at Udacity
 
 1. [Project1](#project1)
 2. [Project2](#project2)
-3. [RoboND-MCL-Lab](#MCL_Lab)
 
 <a name="project1"/>
 
@@ -35,11 +34,3 @@ Design and build a mobile robot, and house it in my world I previously designed.
 ### What I learned
 - How to model a mobile robot that can interface with ROS.
 - How to write ROS nodes: 1. drive_bot to drive the robot, 2. process_image to search for the white ball and drive toward the white ball.
-
-<a name="MCL_Lab"/>
-## 3. Monte Carlo Localization Lab
-
-MCL Lab cloned from Udacity[https://github.com/udacity/RoboND-MCL-Lab]
-
-### What I learned
-- MCL Algorithm: motion and sensing, noise, particle filters, importance weight, resampling, error, and graphing.
