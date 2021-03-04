@@ -68,7 +68,12 @@ $ cd /home/workspace/Project2/catkin_ws/
 $ source devel/setup.bash
 $ roslaunch ball_chaser ball_chaser.launch
 ```
-
+#### Step 6 Launch rqt_image_view to visualize robot's camera images
+```sh
+$ cd /home/workspace/Project2/catkin_ws/
+$ source devel/setup.bash
+$ rosrun rqt_image_view rqt_image_view
+```
 ### Output
 
-Myrobot inside myworld in Gazebo as well as RViz. The white ball should be located outside the building. Now place the white ball at different positions in front of the robot and see if the robot is capable of chasing the ball!
+Myrobot inside myworld in Gazebo as well as RViz. The white ball should be located outside the building. Now place the white ball at different positions in front of the robot. The robot should move towards the white ball.
