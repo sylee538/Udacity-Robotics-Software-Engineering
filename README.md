@@ -2,12 +2,13 @@
 
 This repository is for Nanodegree in Robotics Software Engineer at Udacity
 
-*Updated: Feb 26, 2021*
+*Updated: March 3, 2021*
 
 #### Contents
 
 1. [Project1](#project1)
 2. [Project2](#project2)
+3. [Project3](#project3)
 
 <a name="project1"/>
 
@@ -18,8 +19,8 @@ This repository is for Nanodegree in Robotics Software Engineer at Udacity
 Design a Gazebo World environment including multiple models and use it as a base for the rest of my projects.
 
 ### What I learned
-- How to create Gazebo World and interact with it through Plugins.
-- How to design model using Gazebo tools, such as moderator tool and building editor tool.
+- Launching a Gazebo Environment
+- Designing in Gazebo
 
 <a name="project2"/>
 
@@ -30,5 +31,21 @@ Design a Gazebo World environment including multiple models and use it as a base
 Design and build a mobile robot, and house it in my world I previously designed. Then, program my robot with C++ nodes in ROS to chase white colored ball.
 
 ### What I learned
-- How to model a mobile robot that can interface with ROS.
-- How to write ROS nodes: 1. drive_bot to drive the robot, 2. process_image to search for the white ball and drive toward the white ball.
+- Building Catkin Workspaces
+- ROS node creation
+- ROS node communication
+- Using additional ROS packages
+- Gazebo world integration
+- RViz integration
+
+<a name="project3"/>
+
+## 3. Project3: Where Am I?
+
+### Goal
+
+Interface my mobile robot with the Adaptive Monte Carlo Localization algorithm in ROS to estimate my robot's position as it travels through a predefined set of waypoints, and tune different parameters to increase the localization efficiency of the robot.
+
+### What I learned
+- Implementation of Adaptive Monte Carlo Localization in ROS
+- Understanding of tuning parameters required
