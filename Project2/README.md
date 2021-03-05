@@ -58,7 +58,7 @@ $ make
 #### Step 4 Launch myworld on Gazebo
 ```sh
 $ cd /home/workspace/Project2/catkin_ws
-$ source devel/setup.#!/usr/bin/env bash
+$ source devel/setup.bash
 $ roslaunch my_robot world.launch
 ```
 
