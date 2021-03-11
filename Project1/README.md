@@ -31,7 +31,7 @@ $ sudo apt-get upgrade -y
 #### Step 2 Clone the lab folder in /home/workspace/
 ```sh
 $ cd /home/workspace/
-$ git clone https://github.com/sylee538/Udacity-Robotics-Software-Engineering/Project1
+$ git clone https://github.com/sylee538/Udacity-Robotics-Software-Engineering.git
 ```
 
 #### Step 3 Compile the code
