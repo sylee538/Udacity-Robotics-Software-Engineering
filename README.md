@@ -2,13 +2,14 @@
 
 This repository is for Nanodegree in Robotics Software Engineer at Udacity
 
-*Updated: March 3, 2021*
+*Updated: March 10, 2021*
 
 #### Contents
 
 1. [Project1](#project1)
 2. [Project2](#project2)
 3. [Project3](#project3)
+4. [Project4](#project4)
 
 <a name="project1"/>
 
@@ -49,3 +50,15 @@ Interface my mobile robot with the Adaptive Monte Carlo Localization algorithm i
 ### What I learned
 - Implementation of Adaptive Monte Carlo Localization in ROS
 - Understanding of tuning parameters required
+
+<a name="project4"/>
+
+## 4. Project4: Map My World
+
+### Goal
+
+Interface my mobile robot with an RTAB Map ROS package to localize the robot and build 2D and 3D maps of the environment. Properly launch the robot and then teleop it to map its environment.
+
+### What I learned
+- SLAM implementation with ROS/Gazebo
+- ROS debugging tools: rqt, roswtf
