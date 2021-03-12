@@ -28,7 +28,7 @@ $ roslaunch my_robot world.launch
 ```sh
 $ cd /home/workspace/Project4/catkin_ws
 $ source devel/setup.bash
-$ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+$ roslaunch my_robot teleop.launch
 ```
 
 #### Step 5 Launch mapping.launch
@@ -37,8 +37,9 @@ $ cd /home/workspace/Project4/catkin_ws
 $ source devel/setup.bash
 $ roslaunch my_robot mapping.launch
 ```
+Move the robot around the environment. Make sure that it is moving slow. You can maximize your loop closures by going over similar paths two or three times.
 
-#### Step 4 Open mapping database
+#### Step 6 Open mapping database
 ```sh
 $ cd /root/.ros/
 $ rtabmap-databaseViewer ~/.ros/rtabmap.db
@@ -48,4 +49,4 @@ View -> Constraint View
 View -> Graph View
 
 ### Output
-Navigate the robot in the simulation to create map for the environment. Map db file will be located in the /root/.ros/ folder. Check the example output inside db folder. 
+Navigate the robot in the simulation to create map for the environment. Map db file will be located in the /root/.ros/ folder.
