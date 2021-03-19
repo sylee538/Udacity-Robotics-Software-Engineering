@@ -1,6 +1,7 @@
 #include <ros/ros.h>
 #include <visualization_msgs/Marker.h>
 #include "nav_msgs/Odometry.h"
+#include <math.h>
 
 //Pickup/Dropoff position
 float pickUp[3] = {-6.0, 2.0, 1.0};
@@ -16,12 +17,12 @@ bool droppedOff = false;
 void chatterCallback(const nav_msgs::Odometry::ConstPtr& msg)
 {
   //if the robot is at the pickup location, set atPickUp to true
-  if (pickUp[0] - msg->pose.pose.position.x < 0.5 && pickUp[1] - msg->pose.pose.position.y < 0.5) {
+  if (abs(pickUp[0] - msg->pose.pose.position.x) < 0.3 && abs(pickUp[1] - msg->pose.pose.position.y) < 0.3) {
     atPickUp = true;
   } else { atPickUp = false; }
   
   //if the robot is at the dropoff location, set atDropOff to true
-  if (dropOff[0] - msg->pose.pose.position.x < 0.5 && dropOff[1] - msg->pose.pose.position.y < 0.5) {
+  if (abs(dropOff[0] - msg->pose.pose.position.x) < 0.3 && abs(dropOff[1] - msg->pose.pose.position.y) < 0.3) {
     atDropOff = true;
   } else { atDropOff = false; }
   
