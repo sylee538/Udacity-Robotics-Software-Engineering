@@ -4,7 +4,7 @@
 #include <math.h>
 
 //Pickup/Dropoff position
-float pickUp[3] = {-6.0, 2.0, 1.0};
+float pickUp[3] = {2.0, 6.0, 1.0};
 float dropOff[3] = {0.0, 0.0, 1.0};
 
 // Flags
