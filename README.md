@@ -10,6 +10,7 @@ This repository is for Nanodegree in Robotics Software Engineer at Udacity
 2. [Project2](#project2)
 3. [Project3](#project3)
 4. [Project4](#project4)
+5. [Project5](#project5)
 
 <a name="project1"/>
 
@@ -62,3 +63,16 @@ Interface my mobile robot with an RTAB Map ROS package to localize the robot and
 ### What I learned
 - SLAM implementation with ROS/Gazebo
 - ROS debugging tools: rqt, roswtf
+
+<a name="project5"/>
+
+## 5. Project5: Home Service Robot
+
+### Goal
+
+Use a SLAM package to autonomously map an environment and interface robot with a path planning and navigation ROS package to move objects within an environment.
+
+### What I learned
+- Advanced ROS and Gazebo Integration
+- ROS Navigation stack 7
+- Path Planning
