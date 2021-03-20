@@ -4,7 +4,7 @@
 #include <math.h>
 
 //Pickup/Dropoff position
-float pickUp[3] = {2.0, 6.0, 1.0};
+float pickUp[3] = {-6.0, 2.0, 1.0};
 float dropOff[3] = {0.0, 0.0, 1.0};
 
 // Flags
@@ -17,12 +17,12 @@ bool droppedOff = false;
 void chatterCallback(const nav_msgs::Odometry::ConstPtr& msg)
 {
   //if the robot is at the pickup location, set atPickUp to true
-  if (abs(pickUp[0] - msg->pose.pose.position.x) < 0.3 && abs(pickUp[1] - msg->pose.pose.position.y) < 0.3) {
+  if (abs(pickUp[0] - msg->pose.pose.position.x) < 0.1 && abs(pickUp[1] - msg->pose.pose.position.y) < 0.1) {
     atPickUp = true;
   } else { atPickUp = false; }
   
   //if the robot is at the dropoff location, set atDropOff to true
-  if (abs(dropOff[0] - msg->pose.pose.position.x) < 0.3 && abs(dropOff[1] - msg->pose.pose.position.y) < 0.3) {
+  if (abs(dropOff[0] - msg->pose.pose.position.x) < 0.1 && abs(dropOff[1] - msg->pose.pose.position.y) < 0.1) {
     atDropOff = true;
   } else { atDropOff = false; }
   
@@ -44,7 +44,7 @@ int main( int argc, char** argv )
   {
     visualization_msgs::Marker marker;
     // Set the frame ID and timestamp.  See the TF tutorials for information on these.
-    marker.header.frame_id = "map";
+    marker.header.frame_id = "odom";
     marker.header.stamp = ros::Time::now();
 
     // Set the namespace and id for this marker.  This serves to create a unique ID
@@ -88,7 +88,6 @@ int main( int argc, char** argv )
         return 0;
       }
       ROS_WARN_ONCE("Please create a subscriber to the marker");
-      sleep(1);
      }
     
      //Publish marker at pick up zone

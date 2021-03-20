@@ -24,12 +24,12 @@ int main(int argc, char** argv){
   goal.target_pose.header.stamp = ros::Time::now();
 
   // Define a position and orientation for the robot to reach near the front door
-  goal.target_pose.pose.position.x = -6.0;
-  goal.target_pose.pose.position.y = 2.0;
+  goal.target_pose.pose.position.x = 2.0;
+  goal.target_pose.pose.position.y = 6.0;
   goal.target_pose.pose.orientation.w = 1.0;
 
    // Send the goal position and orientation for the robot to reach
-  ROS_INFO("Sending the robot to reach near the front door");
+  ROS_INFO("Sending the robot to get the box");
   ac.sendGoal(goal);
 
   // Wait an infinite time for the results
@@ -37,7 +37,7 @@ int main(int argc, char** argv){
 
   // Check if the robot reached its goal
   if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED)
-    ROS_INFO("Reached to the door!");
+    ROS_INFO("Got the box!");
   else
     ROS_INFO("The robot failed to move to the door for some reason");
   
